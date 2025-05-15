@@ -1,4 +1,4 @@
-import App from './App'
+import App from '../client/src/App'
 require('dotenv').config();
 const express = require('express');
 const mongoose = require('mongoose');
@@ -6,9 +6,9 @@ const cors = require('cors');
 const morgan = require('morgan');
 
 // Import routes
-const authRoutes = require('./routes/auth.routes');
-const projectRoutes = require('./routes/project.routes');
-const taskRoutes = require('./routes/task.routes');
+const authRoutes = require('./src/routes/auth.routes');
+const projectRoutes = require('./src/routes/project.routes');
+const taskRoutes = require('./task.routes');
 
 const app = express();
 

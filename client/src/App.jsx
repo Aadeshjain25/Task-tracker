@@ -8,9 +8,9 @@ import { AuthProvider } from './contexts/AuthContext';
 import Layout from './components/Layout';
 import Login from './pages/Login';
 import Register from './pages/Register';
-import Dashboard from './pages/Dashboard';
-import ProjectDetails from './pages/ProjectDetails';
 import PrivateRoute from './components/PrivateRoute';
+import Dashboard from './components/Dashboard';
+import ProjectDetails from './components/ProjectDetails';
 
 // Create theme
 const theme = createTheme({
@@ -34,7 +34,7 @@ const App = () => {
           <Routes>
             <Route path="/login" element={<Login />} />
             <Route path="/register" element={<Register />} />
-            <Route path="/" element={<Layout />}>
+            <Route path="/layout" element={<Layout />}>
               <Route index element={<Navigate to="/dashboard" replace />} />
               <Route
                 path="dashboard"

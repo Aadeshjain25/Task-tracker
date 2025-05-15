@@ -8,7 +8,7 @@ const morgan = require('morgan');
 // Import routes
 const authRoutes = require('./routes/auth.routes');
 const projectRoutes = require('./routes/project.routes');
-const taskRoutes = require('./task.routes');
+const taskRoutes = require('./routes/task.routes');
 
 const app = express();
 

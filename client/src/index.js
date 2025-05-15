@@ -1,3 +1,4 @@
+import App from '../../client/src/App'
 require('dotenv').config();
 const express = require('express');
 const mongoose = require('mongoose');
@@ -36,3 +37,10 @@ const PORT = process.env.PORT || 5000;
 app.listen(PORT, () => {
   console.log(`Server is running on port ${PORT}`);
 }); 
+
+const root = ReactDOM.createRoot(document.getElementById('root'));
+root.render(
+  <React.StrictMode>
+    <App />
+  </React.StrictMode>
+);

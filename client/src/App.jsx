@@ -3,14 +3,15 @@ import { BrowserRouter as Router, Routes, Route, Navigate } from 'react-router-d
 import { ThemeProvider, createTheme } from '@mui/material/styles';
 import CssBaseline from '@mui/material/CssBaseline';
 import { AuthProvider } from './contexts/AuthContext';
+import LoadingSpinner from './components/LoadingSpinner'; 
 
 // Components
 import Layout from './components/Layout';
 import Login from './pages/Login';
 import Register from './pages/Register';
 import PrivateRoute from './components/PrivateRoute';
-import Dashboard from './components/Dashboard';
-import ProjectDetails from './components/ProjectDetails';
+import Dashboard from './pages/Dashboard';
+import ProjectDetails from './pages/ProjectDetails';
 
 // Create theme
 const theme = createTheme({
@@ -34,7 +35,7 @@ const App = () => {
           <Routes>
             <Route path="/login" element={<Login />} />
             <Route path="/register" element={<Register />} />
-            <Route path="/layout" element={<Layout />}>
+            <Route path="/Layout" element={<Layout />}>
               <Route index element={<Navigate to="/dashboard" replace />} />
               <Route
                 path="dashboard"
